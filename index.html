@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
+      <title>Cold or Allergy</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -36,19 +36,28 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
-        var allergy_count = 0;
+       	// This keeps track of how many of the answers a person inputs suggest that he/she has an allergy. If the answer shows symptoms of an allergy, the number will increase.
+		var allergy_count = 0;
+		// This keeps track of how many answers a person inputs suggest that he/she has a cold. If the answer shows symptoms of a cold, the number will increase.
         var cold_count = 0;
+		// This is the total number of questions the app user will have to answer before a diganosis is made.
+		var total_questions = 4; 
 
 
         function allergyAdd(){
+		// This function is called when a person's answer suggests he/she has an allergy. The allergy counter increases by 1 each time.
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
 
         }
 
         function coldAdd(){
+			// This function is called when a person's answer suggests he/she has a cold. The cold counter increases by 1 each time. 
             cold_count = cold_count + 1;
         }
+
+		function calculateResults
+			// This function is called when the person has answered all questions and the final percentage of their allergy and cold diagnosis needs to be determined. The final percentages are then determined.
 
   </script>
 
