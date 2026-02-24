@@ -43,21 +43,27 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		// This is the total number of questions the app user will have to answer before a diganosis is made.
 		var total_questions = 4; 
 
-
-        function allergyAdd(){
 		// This function is called when a person's answer suggests he/she has an allergy. The allergy counter increases by 1 each time.
+        function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-
         }
 
+		// This function is called when a person's answer suggests he/she has a cold. The cold counter increases by 1 each time. 
         function coldAdd(){
-			// This function is called when a person's answer suggests he/she has a cold. The cold counter increases by 1 each time. 
             cold_count = cold_count + 1;
         }
 
-		function calculateResults
-			// This function is called when the person has answered all questions and the final percentage of their allergy and cold diagnosis needs to be determined. The final percentages are then determined.
+		// This function is called when the person has answered all questions and the final percentage of their allergy and cold diagnosis needs to be determined. The final percentages are then determined.
+		function calculateResults(){
+			// This variable will allow the final percentage or "chances" of an allergy to be calculated.
+			var allergyPercent = (allergy_count/4) * 100;
+			// This variable will allow the final percentage or "chances" of a cold to be calculated.
+			var coldPercent = (cold_count/4) * 100;
+
+			var resultText = document.getElementById("results");
+			resultText.innerHTML = "Probability it is allergies=" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		}
 
   </script>
 
@@ -106,8 +112,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Put Question 1 content here.</p>    
-    	</div>
+        <p>Are your eyes watery or itchy?</p>
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+ </div><!-- /content -->
 </div>
 
 <div class="page" id="two">
@@ -116,9 +124,34 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Content of page 2 goes here.</p>
-	</div>
+		<p>Do you have a fever?</p>
+		<a href="#three" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#three" onclick="allergyAdd();" class=w3-btn w3-black">No</a>
+	</div><!-- /content -->
 </div>	
+
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Do you have a sore throat?</p>
+		<a href="#four" onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#four" onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+	</div><!-- /content -->
+</div>
+
+<div class="page" id="four">
+	<div class="w3-container w2-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+
+	<div id="content" class="w3-container">
+		<p>Are your symptoms seasonal or chronic?</p>
+		<a href="#resultsPage" onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#resultsPage" onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	</div><!-- /content -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
