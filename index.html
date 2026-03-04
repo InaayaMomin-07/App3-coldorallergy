@@ -34,7 +34,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
+//JavaScript section that controls the score users see on their screen when the final results are displayed.
 <script>
        	// This keeps track of how many of the answers a person inputs suggest that he/she has an allergy. If the answer shows symptoms of an allergy, the number will increase.
 		var allergy_count = 0;
@@ -68,7 +68,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
   </script>
 
 
-
+//This section codes for the layout of the app.
+//The pages are brought onto the screen when their IDs are clicked.
 <style>	
 .body {
      margin: 0em;
@@ -84,13 +85,15 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 0;
     background-color: hsl(0,0%,100%);
 }
-
+	
   .page:target {
     left: 0vw;
     z-index: 1;
 }
 </style>
 
+//A carrot colored header is displayed at the top of the screen.
+//After clicking the "Get Statrted" button, the users are directed towards the first page.
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Cold or Allergies?</h1>
@@ -105,7 +108,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div> <!-- /content -->
 	
 
-
+//This section codes for page 1. The user can answer "yes" or "no." Based on the user's answer, it will add to either the allergy or cold counter. 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -118,7 +121,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div>
 
 
-
+//This section codes for page 2. The user can answer "yes" or "no." Based on the user's answer, it will add to either the allergy or cold counter. 
 <div class="page" id="two">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -131,6 +134,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div><!-- /content -->
 </div>	
 
+//This section codes for page 3. The user can answer "yes" or "no." Based on the user's answer, it will add to either the allergy or cold counter. 
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -143,6 +147,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div><!-- /content -->
 </div>
 
+
+//This section codes for page 4. The user can answer "yes" or "no." Based on the user's answer, it will add to either the allergy or cold counter. 
 <div class="page" id="four">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -155,6 +161,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div><!-- /content -->
 </div>
 
+//This is the code for the page displayed after all questions are answered. Users can click "Your results" to figure out their calculated percentages.  
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Your results are ready!</h1>
@@ -164,6 +171,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>
 
+//Final results displayed. Results calculated in percentages of cold or allergy. 
 <div class="page" id="resultsPage">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
